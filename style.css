@@ -34,7 +34,7 @@ body {
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #ffcb03;
+  color: #444;
   margin-bottom: 1rem;
 }
 .section__header {
@@ -45,7 +45,7 @@ body {
 
 .btn {
   display: inline-block;
-  background-color: #ffcb03;
+  background-color: #ffd700;
   font-size: 1.6rem;
   font-family: inherit;
   font-weight: 500;
@@ -64,7 +64,7 @@ body {
   font-size: 1.7rem;
   font-family: inherit;
   font-weight: 500;
-  color: #ffcb03;
+  color: #444;
   border: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
@@ -85,28 +85,32 @@ p {
   padding: 0 6rem;
   z-index: 100;
 }
-.nav.sticky {
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.95);
-}
-
 .nav__logo {
   height: 4.5rem;
   transition: all 0.3s;
 }
-
 .nav__links {
   display: flex;
   align-items: center;
   list-style: none;
 }
-
 .nav__item {
   margin-left: 4rem;
+  transition: 0.3s;
 }
-
-.nav__link:link,
-.nav__link:visited {
+.nav__link {
+  padding: 1rem;
+  border-radius: 3rem;
+  font-size: 1rem;
+}
+.nav__link:hover {
+  transform: scale(1.2);
+  background-color: #ffd700;
+}
+.nav__link:focus {
+  background-color: #ffd700;
+}
+.nav__link:link, .nav__link:visited {
   font-size: 1.7rem;
   font-weight: 400;
   color: inherit;
@@ -114,19 +118,14 @@ p {
   display: block;
   transition: all 0.3s;
 }
-
-.nav__link--btn:link,
-.nav__link--btn:visited {
+.nav__link--btn:link, .nav__link--btn:visited {
   padding: 0.8rem 2.5rem;
   border-radius: 3rem;
-  background-color: #ffcb03;
+  background-color: #ffd700;
   color: #222;
 }
-
-.nav__link--btn:hover,
-.nav__link--btn:active {
+.nav__link--btn:hover, .nav__link--btn:active {
   color: inherit;
-  font-size: 2rem;
   color: #333;
 }
 
@@ -147,15 +146,66 @@ p {
   align-items: start;
   justify-items: start;
 }
-
-h1 {
+.header h1 {
   font-size: 5.5rem;
   line-height: 1.35;
 }
-
-h4 {
+.header h4 {
   font-size: 2.4rem;
   font-weight: 500;
+}
+
+.footer {
+  padding: 10rem 3rem;
+  background-color: orange;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background-color: #f3f3f3;
+  padding: 5rem 6rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.modal__header {
+  font-size: 3.25rem;
+  margin-bottom: 4.5rem;
+  line-height: 1.5;
+}
+
+.btn--close-modal {
+  font-family: inherit;
+  color: inherit;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
