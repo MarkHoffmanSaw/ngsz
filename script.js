@@ -1,15 +1,20 @@
 "use strict";
 
+// GENERAL SETTINGS
+
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".btn--close-modal");
 const btnsOpenModal = document.querySelectorAll(".btn--show-modal");
+const imgsOpenModal = document.querySelectorAll(".features__image");
+
 const btnScrollTo = document.querySelector(".btn--scroll-to");
 const autoparkSection = document.querySelector("#autopark");
 const nav = document.querySelector(".nav");
-const tabs = document.querySelectorAll(".operations__tab");
-const tabsContainer = document.querySelector(".operations__tab-container");
-const tabsContent = document.querySelectorAll(".operations__content");
+
+const tabs = document.querySelectorAll(".services__tab");
+const tabsContainer = document.querySelector(".services__tab-container");
+const tabsContent = document.querySelectorAll(".services__content");
 
 /////////////////////////////////////////////////
 // ************** Modal window ************** //
@@ -26,6 +31,7 @@ const closeModal = function () {
 };
 
 btnsOpenModal.forEach((btn) => btn.addEventListener("click", openModal));
+imgsOpenModal.forEach((btn) => btn.addEventListener("click", openModal));
 
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
@@ -102,4 +108,24 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
+});
+
+///////////////////////////////////////////////////////////////
+// ************** Tabed component (services) ************** //
+
+tabsContainer.addEventListener("click", function (e) {
+  const clicked = e.target.closest(".services__tab");
+
+  if (!clicked) return;
+
+  tabs.forEach((tab) => tab.classList.remove("services__tab--active"));
+  tabsContent.forEach((content) =>
+    content.classList.remove("services__content--active")
+  );
+
+  clicked.classList.add("services__tab--active");
+
+  document
+    .querySelector(`.services__content--${clicked.dataset.tab}`)
+    .classList.add("services__content--active");
 });
