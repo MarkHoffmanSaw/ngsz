@@ -47,7 +47,7 @@
       <div class="header__title">
         <img
           class="header__title-image"
-          src="/images/logo.jpg"
+          src="/images/logo.png"
           alt="Спецтехника"
         />
         <h1>
@@ -256,51 +256,51 @@
       </div>
 
       <div class="container">
-        <div class="container__item">
-          <img class="container__item-image" src="/images/перевозка-1.jpg" />
+        <div class="container__header"><h4>Осуществляем перевозку:</h4></div>
 
-          <div class="container__item-description">
-            <h5>Промышленное оборудование</h5>
+        <div class="items">
+          <div class="items__item">
+            <div class="items__description">
+              <h5>Промышленного оборудования</h5>
+            </div>
+            <img class="items__image" src="/images/перевозка-1.jpg" />
+          </div>
+
+          <div class="items__item">
+            <div class="items__description">
+              <h5>Крупногабаритных резервуаров</h5>
+            </div>
+            <img class="items__image" src="/images/перевозка-2.jpg" />
+          </div>
+
+          <div class="items__item">
+            <div class="items__description">
+              <h5>Буровых установок</h5>
+            </div>
+            <img class="items__image" src="/images/перевозка-3.jpg" />
           </div>
         </div>
 
-        <div class="container__item">
-          <img class="container__item-image" src="/images/перевозка-2.jpg" />
-
-          <div class="container__item-description">
-            <h5>Крупногабаритные резервуары</h5>
+        <div class="items">
+          <div class="items__item">
+            <div class="items__description">
+              <h5>Строительной техники</h5>
+            </div>
+            <img class="items__image" src="/images/перевозка-4.jpg" />
           </div>
-        </div>
 
-        <div class="container__item">
-          <img class="container__item-image" src="/images/перевозка-3.jpg" />
-
-          <div class="container__item-description">
-            <h5>Буровые установки</h5>
+          <div class="items__item">
+            <div class="items__description">
+              <h5>Дорожной спецтехники</h5>
+            </div>
+            <img class="items__image" src="/images/перевозка-5.jpg" />
           </div>
-        </div>
 
-        <div class="container__item">
-          <img class="container__item-image" src="/images/перевозка-4.jpg" />
-
-          <div class="container__item-description">
-            <h5>Строительная техника</h5>
-          </div>
-        </div>
-
-        <div class="container__item">
-          <img class="container__item-image" src="/images/перевозка-5.jpg" />
-
-          <div class="container__item-description">
-            <h5>Дорожная спецтехника</h5>
-          </div>
-        </div>
-
-        <div class="container__item">
-          <img class="container__item-image" src="/images/перевозка-6.jpg" />
-
-          <div class="container__item-description">
-            <h5>Сельскохозяйственная техника</h5>
+          <div class="items__item">
+            <div class="items__description">
+              <h5>Сельскохозяйственной техники</h5>
+            </div>
+            <img class="items__image" src="/images/перевозка-6.jpg" />
           </div>
         </div>
       </div>
@@ -309,13 +309,64 @@
     <section class="section section--hidden" id="about-us">
       <h2 class="section__title">О нас</h2>
 
-      <!-- features div -->
+      <div class="section__description">
+        <h3>
+          Предоставляем спецтехнику в аренду<span class="highlight"
+            >с 2010 года</span
+          >
+        </h3>
+        <h3>
+          Имеем<span class="highlight">собственный</span> автопарк спецтехники
+        </h3>
+        <h3>
+          Подача техники <span class="highlight">в течение 2-х часов</span>
+        </h3>
+        <h3>
+          Юридическая чистота сделок,
+          <span class="highlight">работаем по договору</span>
+        </h3>
+      </div>
+
+      <div class="slider">
+        <div class="slide slide--1">
+          <img src="images/галерея-1.jpeg" />
+        </div>
+
+        <div class="slide slide--2">
+          <img src="images/галерея-2.jpeg" />
+        </div>
+
+        <div class="slide slide--3">
+          <img src="images/галерея-3.jpeg" />
+        </div>
+
+        <div class="slide slide--4">
+          <img src="images/галерея-4.jpeg" />
+        </div>
+
+        <div class="slide slide--5">
+          <img src="images/галерея-5.jpeg" />
+        </div>
+
+        <div class="slide slide--6">
+          <img src="images/галерея-6.jpeg" />
+        </div>
+
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
     </section>
 
     <section class="section section--hidden" id="contacts">
       <h2 class="section__title">Контакты и адреса</h2>
 
-      <!-- features div -->
+      <div class="section__description">
+        <p>Адрес: г. Санкт-Петербург, д. Новосергиевка, пром-зона</p>
+        <p>ИНН: 000000000000000000000</p>
+        <p>ОГРН: 00000000000000000000</p>
+        <p>Номер: +7999999999</p>
+      </div>
     </section>
 
     <footer class="footer">
@@ -326,20 +377,24 @@
           target="_blank"
           href="https://www.instagram.com/vice.artur/"
           >Artur Sopov</a
-        >.
+        >, 2022
       </p>
     </footer>
 
     <div class="modal hidden">
       <button class="btn--close-modal">&times;</button>
       <h2 class="modal__header">
-        Позвони и узнай цену на услуги в течение 2-х минут
+        Позвони и узнай цену на услуги
+        <span class="highlight">в течение 2-х минут</span>
       </h2>
-      <h2 class="modal__header">+7(960)-286-77-95</h2>
-      <h2>Звонки принимаются с понедельника по пятницу с 9 до 18 часов</h2>
+
+      <div class="modal__description">
+        <h2>+7(960)-286-77-95</h2>
+        <h3>Понедельник-пятница (9:00 - 18:00)</h3>
+      </div>
     </div>
     <div class="overlay hidden"></div>
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
