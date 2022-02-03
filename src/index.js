@@ -1,10 +1,10 @@
 "use strict";
 
-// SETTING FOR WEBPACK ONLY! (development & production)
+// SETTINGS FOR WEBPACK ONLY! (development & production)
 
 import css from "./style.css";
 
-function importImages(r) {
+(function importImages(r) {
   let images = {};
 
   r.keys().map((item) => {
@@ -13,46 +13,7 @@ function importImages(r) {
   });
 
   return images;
-}
-
-const images = importImages(
-  require.context("./images", false, /\.(png|jpe?g|svg)$/)
-);
-
-// document.getElementById("logo-small").src = images["logo-small.png"];
-// document.getElementById("logo").src = images["logo.png"];
-// document.getElementById("autopark-1").src = images["autopark-1.png"];
-// document.getElementById("autopark-2").src = images["autopark-2.png"];
-// document.getElementById("autopark-3").src = images["autopark-3.png"];
-// document.getElementById("autopark-4").src = images["autopark-4.png"];
-// document.getElementById("autopark-5").src = images["autopark-5.png"];
-// document.getElementById("autopark-6").src = images["autopark-6.png"];
-// document.getElementById("autopark-7").src = images["autopark-7.png"];
-// document.getElementById("autopark-8").src = images["autopark-8.png"];
-// document.getElementById("autopark-9").src = images["autopark-9.png"];
-// document.getElementById("autopark-10").src = images["autopark-10.png"];
-// document.getElementById("autopark-11").src = images["autopark-11.png"];
-// document.getElementById("galeria-1").src = images["galeria-1.jpeg"];
-// document.getElementById("galeria-2").src = images["galeria-2.jpeg"];
-// document.getElementById("galeria-3").src = images["galeria-3.jpeg"];
-// document.getElementById("galeria-4").src = images["galeria-4.jpeg"];
-// document.getElementById("galeria-5").src = images["galeria-5.jpeg"];
-// document.getElementById("galeria-6").src = images["galeria-6.jpeg"];
-// document.getElementById("gruzovik-1").src = images["gruzovik-1.png"];
-// document.getElementById("gruzovik-2").src = images["gruzovik-2.png"];
-// document.getElementById("gruzovik-3").src = images["gruzovik-3.png"];
-// document.getElementById("perevozka-1").src = images["perevozka-1.jpg"];
-// document.getElementById("perevozka-2").src = images["perevozka-2.jpg"];
-// document.getElementById("perevozka-3").src = images["perevozka-3.jpg"];
-// document.getElementById("perevozka-4").src = images["perevozka-4.jpg"];
-// document.getElementById("perevozka-5").src = images["perevozka-5.jpg"];
-// document.getElementById("perevozka-6").src = images["perevozka-6.jpg"];
-// document.getElementById("uslugi-1").src = images["uslugi-1.jpg"];
-// document.getElementById("uslugi-2").src = images["uslugi-2.jpg"];
-// document.getElementById("uslugi-3").src = images["uslugi-3.jpg"];
-// document.getElementById("uslugi-4").src = images["uslugi-4.jpg"];
-// document.getElementById("uslugi-5").src = images["uslugi-5.jpg"];
-// document.getElementById("uslugi-6").src = images["uslugi-6.jpg"];
+})(require.context("./images", false, /\.(png|jpe?g|svg)$/));
 
 // GENERAL SETTINGS
 
