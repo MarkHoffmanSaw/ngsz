@@ -4,80 +4,55 @@
 
 import css from "./style.css";
 
-import logoSmall from "./images/logo-small.png";
-import logo from "./images/logo.png";
+function importImages(r) {
+  let images = {};
 
-import autopark1 from "./images/autopark-1.png";
-import autopark2 from "./images/autopark-2.png";
-import autopark3 from "./images/autopark-3.png";
-import autopark4 from "./images/autopark-4.png";
-import autopark5 from "./images/autopark-5.png";
-import autopark6 from "./images/autopark-6.png";
-import autopark7 from "./images/autopark-7.png";
-import autopark8 from "./images/autopark-8.png";
-import autopark9 from "./images/autopark-9.png";
-import autopark10 from "./images/autopark-10.png";
-import autopark11 from "./images/autopark-11.png";
+  r.keys().map((item) => {
+    console.log(item.replace);
+    images[item.replace("./", "")] = r(item).default;
+  });
 
-import galeria1 from "./images/galeria-1.jpeg";
-import galeria2 from "./images/galeria-2.jpeg";
-import galeria3 from "./images/galeria-3.jpeg";
-import galeria4 from "./images/galeria-4.jpeg";
-import galeria5 from "./images/galeria-5.jpeg";
-import galeria6 from "./images/galeria-6.jpeg";
+  return images;
+}
 
-import gruzovik1 from "./images/gruzovik-1.png";
-import gruzovik2 from "./images/gruzovik-2.png";
-import gruzovik3 from "./images/gruzovik-3.png";
+const images = importImages(
+  require.context("./images", false, /\.(png|jpe?g|svg)$/)
+);
 
-import perevozka1 from "./images/perevozka-1.jpg";
-import perevozka2 from "./images/perevozka-2.jpg";
-import perevozka3 from "./images/perevozka-3.jpg";
-import perevozka4 from "./images/perevozka-4.jpg";
-import perevozka5 from "./images/perevozka-5.jpg";
-import perevozka6 from "./images/perevozka-6.jpg";
-
-import uslugi1 from "./images/uslugi-1.jpg";
-import uslugi2 from "./images/uslugi-2.jpg";
-import uslugi3 from "./images/uslugi-3.jpg";
-import uslugi4 from "./images/uslugi-4.jpg";
-import uslugi5 from "./images/uslugi-5.jpg";
-import uslugi6 from "./images/uslugi-6.jpg";
-
-document.getElementById("logo-small").src = logoSmall;
-document.getElementById("logo").src = logo;
-document.getElementById("autopark-1").src = autopark1;
-document.getElementById("autopark-2").src = autopark2;
-document.getElementById("autopark-3").src = autopark3;
-document.getElementById("autopark-4").src = autopark4;
-document.getElementById("autopark-5").src = autopark5;
-document.getElementById("autopark-6").src = autopark6;
-document.getElementById("autopark-7").src = autopark7;
-document.getElementById("autopark-8").src = autopark8;
-document.getElementById("autopark-9").src = autopark9;
-document.getElementById("autopark-10").src = autopark10;
-document.getElementById("autopark-11").src = autopark11;
-document.getElementById("galeria-1").src = galeria1;
-document.getElementById("galeria-2").src = galeria2;
-document.getElementById("galeria-3").src = galeria3;
-document.getElementById("galeria-4").src = galeria4;
-document.getElementById("galeria-5").src = galeria5;
-document.getElementById("galeria-6").src = galeria6;
-document.getElementById("gruzovik-1").src = gruzovik1;
-document.getElementById("gruzovik-2").src = gruzovik2;
-document.getElementById("gruzovik-3").src = gruzovik3;
-document.getElementById("perevozka-1").src = perevozka1;
-document.getElementById("perevozka-2").src = perevozka2;
-document.getElementById("perevozka-3").src = perevozka3;
-document.getElementById("perevozka-4").src = perevozka4;
-document.getElementById("perevozka-5").src = perevozka5;
-document.getElementById("perevozka-6").src = perevozka6;
-document.getElementById("uslugi-1").src = uslugi1;
-document.getElementById("uslugi-2").src = uslugi2;
-document.getElementById("uslugi-3").src = uslugi3;
-document.getElementById("uslugi-4").src = uslugi4;
-document.getElementById("uslugi-5").src = uslugi5;
-document.getElementById("uslugi-6").src = uslugi6;
+// document.getElementById("logo-small").src = images["logo-small.png"];
+// document.getElementById("logo").src = images["logo.png"];
+// document.getElementById("autopark-1").src = images["autopark-1.png"];
+// document.getElementById("autopark-2").src = images["autopark-2.png"];
+// document.getElementById("autopark-3").src = images["autopark-3.png"];
+// document.getElementById("autopark-4").src = images["autopark-4.png"];
+// document.getElementById("autopark-5").src = images["autopark-5.png"];
+// document.getElementById("autopark-6").src = images["autopark-6.png"];
+// document.getElementById("autopark-7").src = images["autopark-7.png"];
+// document.getElementById("autopark-8").src = images["autopark-8.png"];
+// document.getElementById("autopark-9").src = images["autopark-9.png"];
+// document.getElementById("autopark-10").src = images["autopark-10.png"];
+// document.getElementById("autopark-11").src = images["autopark-11.png"];
+// document.getElementById("galeria-1").src = images["galeria-1.jpeg"];
+// document.getElementById("galeria-2").src = images["galeria-2.jpeg"];
+// document.getElementById("galeria-3").src = images["galeria-3.jpeg"];
+// document.getElementById("galeria-4").src = images["galeria-4.jpeg"];
+// document.getElementById("galeria-5").src = images["galeria-5.jpeg"];
+// document.getElementById("galeria-6").src = images["galeria-6.jpeg"];
+// document.getElementById("gruzovik-1").src = images["gruzovik-1.png"];
+// document.getElementById("gruzovik-2").src = images["gruzovik-2.png"];
+// document.getElementById("gruzovik-3").src = images["gruzovik-3.png"];
+// document.getElementById("perevozka-1").src = images["perevozka-1.jpg"];
+// document.getElementById("perevozka-2").src = images["perevozka-2.jpg"];
+// document.getElementById("perevozka-3").src = images["perevozka-3.jpg"];
+// document.getElementById("perevozka-4").src = images["perevozka-4.jpg"];
+// document.getElementById("perevozka-5").src = images["perevozka-5.jpg"];
+// document.getElementById("perevozka-6").src = images["perevozka-6.jpg"];
+// document.getElementById("uslugi-1").src = images["uslugi-1.jpg"];
+// document.getElementById("uslugi-2").src = images["uslugi-2.jpg"];
+// document.getElementById("uslugi-3").src = images["uslugi-3.jpg"];
+// document.getElementById("uslugi-4").src = images["uslugi-4.jpg"];
+// document.getElementById("uslugi-5").src = images["uslugi-5.jpg"];
+// document.getElementById("uslugi-6").src = images["uslugi-6.jpg"];
 
 // GENERAL SETTINGS
 
