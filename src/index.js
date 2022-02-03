@@ -1,7 +1,6 @@
 "use strict";
 
-// import css from "./style.css";
-// import img1 from "./images/автопарк-1.png";
+import css from "./style.css";
 
 // GENERAL SETTINGS
 
@@ -13,6 +12,7 @@ const imgsOpenModal = document.querySelectorAll(".features__image");
 
 const btnScrollTo = document.querySelector(".btn--scroll-to");
 const autoparkSection = document.querySelector("#autopark");
+const allSections = document.querySelectorAll(".section");
 const nav = document.querySelector(".nav");
 
 const tabs = document.querySelectorAll(".services__tab");
@@ -91,8 +91,6 @@ headerObserver.observe(header);
 
 /////////////////////////////////////////////////////////////
 // ************** Reveal sections (smooth) ************** //
-
-const allSections = document.querySelectorAll(".section");
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;
