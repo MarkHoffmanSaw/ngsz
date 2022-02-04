@@ -8,7 +8,6 @@ import css from "./style.css";
   let images = {};
 
   r.keys().map((item) => {
-    console.log(item.replace);
     images[item.replace("./", "")] = r(item).default;
   });
 
@@ -39,6 +38,7 @@ const tabsContent = document.querySelectorAll(".services__content");
 
 const openModal = function (e) {
   e.preventDefault();
+
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };

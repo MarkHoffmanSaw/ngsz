@@ -6,7 +6,11 @@ module.exports = {
     app: "./src/index.js",
   },
 
-  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+  ],
 
   module: {
     rules: [

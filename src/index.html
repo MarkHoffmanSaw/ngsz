@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Import in index.js instead of be here (for a webpack) -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
     <link rel="icon" href="images/logo-small.png" />
     <title>Негабарит Северо-Запад</title>
   </head>
@@ -394,6 +396,7 @@
     </div>
     <div class="overlay hidden"></div>
 
-    <script src="index.js"></script>
+    <!-- Lack of necessary, because it uses in the webpack config -->
+    <!-- <script src="index.js"></script> -->
   </body>
 </html>
