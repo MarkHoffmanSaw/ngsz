@@ -7,13 +7,13 @@
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "serve": "live-server"
+    "server": "live-server"
   },
   "author": "Artur Sopov",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.21",
-    "sass": "^1.49.0"
+    "sass": "^1.49.7"
   },
   "devDependencies": {
     "css-loader": "^6.5.1",

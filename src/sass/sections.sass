@@ -26,7 +26,8 @@
 
     .features
         display: flex
-        justify-content: space-around
+        flex-wrap: wrap
+        justify-content: space-evenly
         align-items: center
         align-content: center
         font-weight: 600
@@ -34,6 +35,7 @@
         margin-bottom: 1rem
 
         &__item
+            max-width: 300px
             margin: 2rem
             display: flex
             flex-direction: column
@@ -72,6 +74,9 @@
             align-items: center
             justify-content: space-around
 
+            @media screen and (max-width: $screen-value)
+                flex-wrap: wrap
+
         &__tab
             margin: 0 1.5rem
             transform: translateY(-50%)
@@ -80,9 +85,17 @@
             font-size: 1.8rem
             font-weight: 600
 
+            @media screen and (max-width: $screen-value)
+                margin: 0.5rem 0
+                padding: 1rem
+                transform: none
+
             &--active
                 transform: translateY(-66%)
                 background-color: $color-primary-lighter
+
+                @media screen and (max-width: $screen-value)
+                    transform: none
 
         &__content
             display: none
@@ -127,9 +140,13 @@
 
         .items
             display: flex
-            justify-content: space-around
+            flex-wrap: wrap
+            justify-content: space-evenly
+            align-items: center
+            align-content: center
 
             &__item
+                max-width: 400px
                 margin: 2rem
                 display: flex
                 flex-direction: column
@@ -138,7 +155,7 @@
                 justify-content: center
 
             &__image
-                width: 60%
+                width: 80%
                 box-shadow: 10px 10px 5px orange
 
             &__description
