@@ -79,10 +79,26 @@ p {
   border-bottom: 5px solid #ffc400;
   background-color: rgba(255, 255, 255, 0.95);
 }
+.nav .toggle-button {
+  margin: 1rem;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
 @media screen and (max-width: 750px) {
-  .nav {
-    padding: 0;
+  .nav .toggle-button {
+    display: flex;
   }
+}
+.nav .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
 }
 .nav.sticky {
   position: fixed;
@@ -94,8 +110,23 @@ p {
   align-items: center;
   list-style: none;
 }
+@media screen and (max-width: 750px) {
+  .nav__links {
+    display: none;
+  }
+}
+.nav__links.active {
+  display: none;
+}
+@media screen and (max-width: 750px) {
+  .nav__links.active {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  }
+}
 .nav__item {
-  margin: 1rem 0rem 1rem 5rem;
+  margin: 1rem 0rem 1rem 2.5rem;
   transition: 0.3s;
 }
 @media screen and (max-width: 750px) {
@@ -116,6 +147,7 @@ p {
 @media screen and (max-width: 750px) {
   .nav__link:hover {
     transform: none;
+    background-color: 0;
   }
 }
 .nav__link:focus {
@@ -154,7 +186,6 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("./images/logo.png");
 }
 .header__title {
   padding: 0 2rem;

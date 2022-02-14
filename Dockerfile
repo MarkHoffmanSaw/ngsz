@@ -6,5 +6,8 @@ COPY package-lock.json ./
 RUN npm install
 COPY . ./
 RUN npm run build
-EXPOSE 8888
-CMD ["npm", "run", "build"]
+
+FROM nginx:1.21.6-alpine as production
+RUN apk add bash
+COPY --from=build /app/dist/ /usr/share/nginx/html/
+CMD ["nginx", "-g", "daemon off;"]  

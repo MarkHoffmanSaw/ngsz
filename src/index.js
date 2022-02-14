@@ -31,7 +31,17 @@ const tabs = document.querySelectorAll(".services__tab");
 const tabsContainer = document.querySelector(".services__tab-container");
 const tabsContent = document.querySelectorAll(".services__content");
 
+const toggleButton = document.getElementsByClassName("toggle-button")[0];
+const navLinks = document.getElementsByClassName("nav__links")[0];
+
 // APPLICATION
+
+////////////////////////////////////////////////
+// ********* Responsive navigation ********* //
+
+toggleButton.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
 
 /////////////////////////////////////////////////
 // ************** Modal window ************** //

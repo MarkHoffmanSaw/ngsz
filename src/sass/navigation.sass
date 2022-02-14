@@ -8,8 +8,24 @@
     border-bottom: 5px solid $color-primary
     background-color: rgba(255, 255, 255, 0.95)
 
-    @media screen and (max-width: $screen-value)
-        padding: 0
+    .toggle-button
+        margin: 1rem
+        top: .75rem
+        right: 1rem
+        display: none
+        flex-direction: column
+        justify-content: space-between
+        width: 30px
+        height: 21px
+
+        @media screen and (max-width: $screen-value)
+            display: flex
+
+        .bar
+            height: 3px
+            width: 100%
+            background-color: black
+            border-radius: 10px
 
     &.sticky
         position: fixed
@@ -21,8 +37,19 @@
         align-items: center
         list-style: none
 
+        @media screen and (max-width: $screen-value)
+            display: none
+
+        &.active
+            display: none
+
+            @media screen and (max-width: $screen-value)
+                display: flex
+                text-align: center
+                flex-direction: column
+
     &__item
-        margin: 1rem 0rem 1rem 5rem
+        margin: 1rem 0rem 1rem 2.5rem
         transition: 0.3s
 
         @media screen and (max-width: $screen-value)
@@ -40,6 +67,7 @@
 
             @media screen and (max-width: $screen-value)
                 transform: none
+                background-color: 0
 
         &:focus
             background-color: $color-primary
