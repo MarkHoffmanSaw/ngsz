@@ -3,6 +3,9 @@
     border-top: 1px solid #ddd
     transition: transform 1s, opacity 1s
 
+    @media screen and (max-width: $screen-value)
+        padding-top: 5rem
+
     &--hidden
         opacity: 0
 
@@ -71,16 +74,17 @@
 
         &__tab-container
             display: flex
-            align-items: center
             justify-content: space-around
 
             @media screen and (max-width: $screen-value)
-                flex-wrap: wrap
+                flex-direction: column
 
         &__tab
             margin: 0 1.5rem
             transform: translateY(-50%)
             color: #3a3a3a
+            background-color: white
+            border: 3px solid grey
             border-radius: 4px
             font-size: 1.8rem
             font-weight: 600
@@ -95,7 +99,7 @@
                 background-color: $color-primary-lighter
 
                 @media screen and (max-width: $screen-value)
-                    transform: none
+                    transform: scale(1.05)
 
         &__content
             display: none
@@ -108,10 +112,14 @@
                 align-items: center
                 justify-content: space-around
 
+                @media screen and (max-width: $screen-value)
+                    flex-direction: column
+
         &__image
             width: 40%
-            border: 6px solid orange
-            border-radius: 50%
+
+            @media screen and (max-width: $screen-value)
+                width: 100%
 
         &__header
             font-size: 2.25rem
