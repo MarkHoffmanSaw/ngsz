@@ -40,9 +40,10 @@
 
     &__links
         display: flex
-        justify-content: space-between
+        justify-content: space-evenly
         flex-wrap: wrap
         align-items: center
+
         list-style: none
 
         @media screen and (max-width: $screen-value)
@@ -104,9 +105,6 @@
         margin: 1rem 0
         width: 11rem
         transition: 0.3s
-
-        @media screen and (max-width: $screen-value)
-            display: none
 
         &:hover
             transition: 0.3s
