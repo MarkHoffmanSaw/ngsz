@@ -4,7 +4,7 @@
     transition: transform 1s, opacity 1s
 
     @media screen and (max-width: $screen-value)
-        padding-top: 5rem
+        padding-top: 7rem
 
     &--hidden
         opacity: 0
@@ -44,8 +44,8 @@
             flex-direction: column
             align-items: center
             text-align: center
-            background-image: linear-gradient(135deg, #ffffff 42.68%, #fffbb2 42.68%, #fffbb2 50%, #ffffff 50%, #ffffff 92.68%, #fffbb2 92.68%, #fffbb2 100%)
-            background-size: 115.97px 115.97px
+            background-image: $gradient-background
+            background-size: $gradient-background-size
 
             h3
                 margin: 1rem
@@ -69,8 +69,8 @@
 
     .services
         margin: 5rem auto
-        background-image: linear-gradient(135deg, #ffffff 35.71%, #fffbb2 35.71%, #fffbb2 50%, #ffffff 50%, #ffffff 85.71%, #fffbb2 85.71%, #fffbb2 100%)
-        background-size: 98.99px 98.99px
+        background-image: $gradient-background
+        background-size: $gradient-background-size
 
         &__tab-container
             display: flex
@@ -142,6 +142,7 @@
             display: flex
             justify-content: center
             font-size: 2.5rem
+            text-align: center
 
             h4
                 border-bottom: 5px solid orange
