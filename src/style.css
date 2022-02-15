@@ -46,6 +46,11 @@ body {
   cursor: pointer;
   transition: all 0.3s;
 }
+@media screen and (max-width: 750px) {
+  .btn--text {
+    margin: 2rem;
+  }
+}
 
 p {
   color: #666;
@@ -66,18 +71,24 @@ p {
   z-index: -1;
   opacity: 0.7;
   transform: scale(1.07, 1.05) skewX(-15deg);
-  background-image: linear-gradient(to top left, #fdf364, #ff9d5b);
+  background-image: linear-gradient(to top left, #fdf364, #fac19b);
 }
 
 .nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin: 0 0 3rem 0;
   padding: 0 6rem;
   z-index: 100;
   border-bottom: 5px solid #ffc400;
   background-color: rgba(255, 255, 255, 0.95);
+}
+@media screen and (max-width: 750px) {
+  .nav {
+    padding: 1rem 0;
+    flex-direction: column;
+    position: absolute;
+  }
 }
 .nav .toggle-button {
   margin: 1rem;
@@ -88,11 +99,15 @@ p {
   justify-content: space-between;
   width: 30px;
   height: 21px;
+  transition: 0.2s;
 }
 @media screen and (max-width: 750px) {
   .nav .toggle-button {
     display: flex;
   }
+}
+.nav .toggle-button:hover {
+  transform: scale(1.1);
 }
 .nav .toggle-button .bar {
   height: 3px;
@@ -105,7 +120,7 @@ p {
 }
 .nav__links {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   list-style: none;
@@ -117,11 +132,11 @@ p {
 }
 .nav__links.active {
   display: none;
+  transition: transform 0.3s;
 }
 @media screen and (max-width: 750px) {
   .nav__links.active {
     display: flex;
-    text-align: center;
     flex-direction: column;
   }
 }
@@ -131,7 +146,7 @@ p {
 }
 @media screen and (max-width: 750px) {
   .nav__item {
-    margin: 0;
+    margin: 0.5rem;
   }
 }
 .nav__link {
@@ -147,7 +162,6 @@ p {
 @media screen and (max-width: 750px) {
   .nav__link:hover {
     transform: none;
-    background-color: 0;
   }
 }
 .nav__link:focus {
@@ -176,6 +190,11 @@ p {
   width: 11rem;
   transition: 0.3s;
 }
+@media screen and (max-width: 750px) {
+  .nav__image {
+    display: none;
+  }
+}
 .nav__image:hover {
   transition: 0.3s;
   transform: scale(1.1);
@@ -186,6 +205,13 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 750px) {
+  .header {
+    height: 600px;
+    align-items: start;
+  }
 }
 .header__title {
   padding: 0 2rem;
@@ -200,19 +226,35 @@ p {
   width: 80%;
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 750px) {
+  .header__title-image {
+    margin: 2rem;
+  }
+}
 .header h1 {
   font-size: 5.5rem;
   line-height: 1.35;
 }
+@media screen and (max-width: 750px) {
+  .header h1 {
+    font-size: 4rem;
+  }
+}
 .header h2 {
   font-size: 3rem;
+}
+@media screen and (max-width: 750px) {
+  .header h2 {
+    font-size: 2.5rem;
+  }
 }
 .header h3 {
   font-size: 2.7rem;
 }
-.header h4 {
-  font-size: 2.4rem;
-  font-weight: 500;
+@media screen and (max-width: 750px) {
+  .header h3 {
+    font-size: 2rem;
+  }
 }
 
 .footer {

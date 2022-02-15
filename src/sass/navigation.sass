@@ -1,12 +1,16 @@
 .nav
     display: flex
-    justify-content: space-between
     align-items: center
     margin: 0 0 3rem 0
     padding: 0 6rem
     z-index: 100
     border-bottom: 5px solid $color-primary
     background-color: rgba(255, 255, 255, 0.95)
+
+    @media screen and (max-width: $screen-value)
+        padding: 1rem 0
+        flex-direction: column
+        position: absolute
 
     .toggle-button
         margin: 1rem
@@ -17,9 +21,13 @@
         justify-content: space-between
         width: 30px
         height: 21px
+        transition: 0.2s
 
         @media screen and (max-width: $screen-value)
             display: flex
+
+        &:hover
+            transform: scale(1.1)
 
         .bar
             height: 3px
@@ -32,7 +40,7 @@
 
     &__links
         display: flex
-        justify-content: space-evenly
+        justify-content: space-between
         flex-wrap: wrap
         align-items: center
         list-style: none
@@ -42,10 +50,10 @@
 
         &.active
             display: none
+            transition: transform 0.3s
 
             @media screen and (max-width: $screen-value)
                 display: flex
-                text-align: center
                 flex-direction: column
 
     &__item
@@ -53,7 +61,7 @@
         transition: 0.3s
 
         @media screen and (max-width: $screen-value)
-            margin: 0
+            margin: .5rem
 
     &__link
         padding: 1rem
@@ -67,7 +75,6 @@
 
             @media screen and (max-width: $screen-value)
                 transform: none
-                background-color: 0
 
         &:focus
             background-color: $color-primary
@@ -97,6 +104,9 @@
         margin: 1rem 0
         width: 11rem
         transition: 0.3s
+
+        @media screen and (max-width: $screen-value)
+            display: none
 
         &:hover
             transition: 0.3s
