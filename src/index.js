@@ -21,6 +21,7 @@ const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".btn--close-modal");
 const btnsOpenModal = document.querySelectorAll(".btn--show-modal");
 const imgsOpenModal = document.querySelectorAll(".features__image");
+const itemsImgOpenModal = document.querySelectorAll(".items__image");
 
 const btnScrollTo = document.querySelector(".btn--scroll-to");
 const autoparkSection = document.querySelector("#autopark");
@@ -60,6 +61,7 @@ const closeModal = function () {
 
 btnsOpenModal.forEach((btn) => btn.addEventListener("click", openModal));
 imgsOpenModal.forEach((btn) => btn.addEventListener("click", openModal));
+itemsImgOpenModal.forEach((btn) => btn.addEventListener("click", openModal));
 
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
