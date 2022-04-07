@@ -69,8 +69,7 @@ p {
 .nav {
   display: flex;
   align-items: center;
-  margin: 0 0 3rem 0;
-  padding: 0 6rem;
+  padding: 0 2rem;
   z-index: 100;
   border-bottom: 5px solid #ffc400;
   background-color: rgba(255, 255, 255, 0.95);
@@ -91,7 +90,7 @@ p {
   justify-content: space-between;
   width: 30px;
   height: 21px;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 @media screen and (max-width: 750px) {
   .nav .toggle-button {
@@ -99,6 +98,7 @@ p {
   }
 }
 .nav .toggle-button:hover {
+  transition: 0.3s;
   transform: scale(1.1);
 }
 .nav .toggle-button .bar {
@@ -124,7 +124,6 @@ p {
 }
 .nav__links.active {
   display: none;
-  transition: transform 0.3s;
 }
 @media screen and (max-width: 750px) {
   .nav__links.active {
@@ -203,6 +202,7 @@ p {
 }
 .header__title {
   padding: 0 2rem;
+  margin: 2rem 0;
   max-width: 115rem;
   display: grid;
   align-content: center;
@@ -321,7 +321,7 @@ p {
 }
 
 .section {
-  padding: 11rem 3rem;
+  padding: 13rem 3rem;
   border-top: 1px solid #ddd;
   transition: transform 1s, opacity 1s;
 }
@@ -501,7 +501,7 @@ p {
   transform: scale(1.1);
 }
 .section .container .items__description {
-  margin: 0 2rem;
+  margin: 1rem 2rem;
   font-size: 2rem;
 }
 .section .container .items__description h5 {
