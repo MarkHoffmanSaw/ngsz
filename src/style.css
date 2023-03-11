@@ -177,7 +177,6 @@ p {
   color: #333;
 }
 .nav__image {
-  margin: 1rem 0;
   width: 11rem;
   transition: 0.3s;
 }
@@ -534,7 +533,7 @@ p {
   top: 50%;
   z-index: 10;
   border: none;
-  background: #ffb820;
+  background: rgb(255, 184, 32);
   color: #333;
   border-radius: 50%;
   height: 5.5rem;
